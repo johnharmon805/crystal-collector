@@ -1,0 +1,28 @@
+#header {
+    align-items: center;
+}
+
+.title {
+    align-items: center;
+    padding-top: 100px;
+}
+
+#one {
+    height: 150px;
+    width: 200px;
+}
+
+#two {
+    height: 150px;
+    width: 200px;
+}
+
+#three {
+    height: 150px;
+    width: 200px;
+}
+
+#four {
+    height: 150px;
+    width: 200px;
+}
