@@ -40,6 +40,7 @@ $(document).ready(function() {
         alert("you lost");
         losses++;
         $("")
+        reset();
     });
 
     $("#two").on("click", function() {
@@ -50,6 +51,7 @@ $(document).ready(function() {
         } else if (counter >= targetnumber);
         alert("you lost");
         losses++;
+        reset();
     });
 
     $("#three").on("click", function() {
@@ -60,16 +62,18 @@ $(document).ready(function() {
         } else if (counter >= targetnumber);
         alert("you lost");
         losses++;
+        reset();
     });
 
     $("#four").on("click", function() {
-            $("#totalNumber").text(counter);
-            if (conter === targetnumber) {
-                alert("you win");
-                wins++;
-            } else if (counter >= targetnumber);
-            alert("you lost");
-            losses++;
-        }
+        $("#totalNumber").text(counter);
+        if (conter === targetnumber) {
+            alert("you win");
+            wins++;
+        } else if (counter >= targetnumber);
+        alert("you lost");
+        losses++;
+        reset();
+
     });
 });
