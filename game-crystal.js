@@ -12,68 +12,89 @@
 
 $(document).ready(function() {
 
-    var targetnumber = math.floor(math.random);
+    var targetnumber = Math.floor(Math.random() * 100);
     var wins = 0;
     var losses = 0;
     var usertotal = 0;
     var counter = 0;
     var guesses = ("");
-    var num1 = math.floor(math.random) * 10;
-    var num2 = math.floor(math.random) * 5;
-    var num3 = math.floor(math.random) * 2;
-    var num4 = math.floor(math.random) * 1;
+    var num1 = Math.floor(Math.random() * 10) + 1;
+    var num2 = Math.floor(Math.random() * 5) + 1;
+    var num3 = Math.floor(Math.random() * 2) + 1;
+    var num4 = Math.floor(Math.random() * 1) + 1;
     var numberOptions = [num1, num2, num3, num4];
+    console.log(numberOptions)
 
-
+    $("#number-to-guess").text(targetnumber);
 
     function reset() {
         numberOptions = 0;
         counter = 0;
+        targetnumber = Math.floor(Math.random() * 100);
+        $("#totalNumber").text(counter);
+        $("#number-to-guess").text(targetnumber);
+
     }
 
     $("#one").on("click", function() {
+        counter = counter + num1;
         $("#totalNumber").text(counter);
-        if (conter === targetnumber) {
+        if (counter === targetnumber) {
             alert("you win");
             wins++;
-        } else if (counter >= targetnumber);
-        alert("you lost");
-        losses++;
-        $("")
-        reset();
+            reset();
+        } else if (counter >= targetnumber) {
+            alert("you lost");
+            losses++;
+            reset();
+        }
+
     });
 
     $("#two").on("click", function() {
+        counter = counter + num2;
         $("#totalNumber").text(counter);
-        if (conter === targetnumber) {
+        if (counter === targetnumber) {
             alert("you win");
             wins++;
-        } else if (counter >= targetnumber);
-        alert("you lost");
-        losses++;
-        reset();
+            reset();
+        } else if (counter >= targetnumber) {
+            alert("you lost");
+            losses++;
+            reset();
+
+        }
+
     });
 
     $("#three").on("click", function() {
+        counter = counter + num3;
         $("#totalNumber").text(counter);
-        if (conter === targetnumber) {
+        if (counter === targetnumber) {
             alert("you win");
             wins++;
-        } else if (counter >= targetnumber);
-        alert("you lost");
-        losses++;
-        reset();
+            reset();
+        } else if (counter >= targetnumber) {
+            alert("you lost");
+            losses++;
+            reset();
+        }
+
     });
 
     $("#four").on("click", function() {
+        counter = counter + num4;
         $("#totalNumber").text(counter);
-        if (conter === targetnumber) {
+        if (counter === targetnumber) {
             alert("you win");
             wins++;
-        } else if (counter >= targetnumber);
-        alert("you lost");
-        losses++;
-        reset();
+            reset();
+        } else if (counter >= targetnumber) {
+            alert("you lost");
+            losses++;
+            reset();
+        }
+
 
     });
 });
